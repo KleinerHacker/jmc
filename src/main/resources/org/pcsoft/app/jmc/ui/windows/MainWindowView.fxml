@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.pcsoft.app.jmc.ui.windows.MainWindowView"
+            prefHeight="800.0" prefWidth="1024.0" fx:id="root">
+
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Open..." onAction="#onOpen"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <ImageView fx:id="image" fitWidth="1024" preserveRatio="true"/>
+    </center>
+    <bottom>
+        <Slider fx:id="slider"/>
+    </bottom>
+
+</BorderPane>

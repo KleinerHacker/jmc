@@ -1,2 +1,2 @@
 # jmc
-Java Movie Creator
+Java Media Center

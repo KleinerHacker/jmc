@@ -10,7 +10,7 @@ public class MainWindow extends Stage {
     private final MainWindowView viewController;
 
     public MainWindow() {
-        setTitle("Java Movie Creator");
+        setTitle("Java Media Center");
 
         final var tuple = Fxml.from(MainWindowView.class).load();
         setScene(new Scene(tuple.getView(), 1024, 800));

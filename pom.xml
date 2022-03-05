@@ -5,7 +5,11 @@
 	<groupId>org.pcsoft.app</groupId>
 	<artifactId>jmc</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>app</module>
+	</modules>
 
 	<build>
 		<plugins>					

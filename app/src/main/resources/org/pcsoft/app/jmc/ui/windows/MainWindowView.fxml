@@ -10,20 +10,21 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.pcsoft.app.jmc.ui.windows.MainWindowView"
-            prefHeight="800.0" prefWidth="1024.0" fx:id="root">
+            prefHeight="800.0" prefWidth="1024.0">
 
     <top>
         <MenuBar>
             <Menu text="File">
-                <MenuItem text="Open..." onAction="#onOpen"/>
+                <Menu text="New Project">
+                    <MenuItem text="Picture Project..." onAction="#onPictureProject"/>
+                    <MenuItem text="Movie Project..." onAction="#onMovieProject"/>
+                </Menu>
             </Menu>
         </MenuBar>
     </top>
+
     <center>
-        <ImageView fx:id="image" fitWidth="1024" preserveRatio="true"/>
+        <TabPane fx:id="tabProjects"/>
     </center>
-    <bottom>
-        <Slider fx:id="slider"/>
-    </bottom>
 
 </BorderPane>

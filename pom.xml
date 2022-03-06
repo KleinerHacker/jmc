@@ -8,7 +8,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>commons</module>
 		<module>app</module>
+		<module>core</module>
 	</modules>
 
 	<build>

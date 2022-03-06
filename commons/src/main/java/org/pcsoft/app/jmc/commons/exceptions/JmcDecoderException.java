@@ -1,4 +1,4 @@
-package org.pcsoft.app.jmc.exceptions;
+package org.pcsoft.app.jmc.commons.exceptions;
 
 public class JmcDecoderException extends JmcException {
     public JmcDecoderException() {

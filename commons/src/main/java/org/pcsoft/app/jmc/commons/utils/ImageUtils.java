@@ -1,4 +1,4 @@
-package org.pcsoft.app.jmc.utils;
+package org.pcsoft.app.jmc.commons.utils;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;

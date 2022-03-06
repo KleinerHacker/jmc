@@ -10,4 +10,18 @@
 
 	<artifactId>jmc-picture.plugins.impl.basic</artifactId>
 
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jmc-commons</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jmc-picture.plugins.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
 </project>

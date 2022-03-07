@@ -7,12 +7,30 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.image.ImageView?>
+<?import org.pcsoft.framework.jfex.controls.ui.component.toolbox.ToolBox?>
+<?import org.pcsoft.framework.jfex.controls.ui.component.toolbox.ToolBoxDescriptor?>
 <fx:root type="BorderPane" fx:id="root"
          xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
          fx:controller="org.pcsoft.app.jmc.picture.ui.panes.PictureProjectPaneView">
 
+    <top>
+        <MenuBar useSystemMenuBar="true">
+            <Menu text="Edit">
+                <MenuItem text="Undo"/>
+                <MenuItem text="Redo"/>
+            </Menu>
+        </MenuBar>
+    </top>
     <center>
         <ImageView fx:id="image" preserveRatio="true"/>
     </center>
+    <right>
+        <ToolBox orientation="RIGHT">
+            <items>
+                <ToolBoxDescriptor title="Filter"/>
+                <ToolBoxDescriptor title="Renderer"/>
+            </items>
+        </ToolBox>
+    </right>
 
 </fx:root>

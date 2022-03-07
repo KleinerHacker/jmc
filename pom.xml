@@ -1,133 +1,141 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.pcsoft.app</groupId>
-	<artifactId>jmc</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>org.pcsoft.app</groupId>
+    <artifactId>jmc</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<modules>
-		<module>commons</module>
-		<module>app</module>
-		<module>core</module>
-	</modules>
+    <modules>
+        <module>commons</module>
+        <module>app</module>
+        <module>core</module>
+    </modules>
 
-	<properties>
-		<kotlin.version>1.6.10</kotlin.version>
-	</properties>
+    <properties>
+        <kotlin.version>1.6.10</kotlin.version>
+    </properties>
 
-	<build>
-		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-		<testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+    <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
-		<plugins>					
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>17</source>
-					<target>17</target>
-				</configuration>
-			</plugin>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.jetbrains.kotlin</groupId>
-				<artifactId>kotlin-maven-plugin</artifactId>
-				<version>${kotlin.version}</version>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
 
-				<executions>
-					<execution>
-						<id>compile</id>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
 
-					<execution>
-						<id>test-compile</id>
-						<goals>
-							<goal>test-compile</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-
-
-	<dependencies>
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-stdlib</artifactId>
-			<version>${kotlin.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jcodec</groupId>
-			<artifactId>jcodec</artifactId>
-			<version>0.2.5</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jcodec</groupId>
-			<artifactId>jcodec-javase</artifactId>
-			<version>0.2.5</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.kleinerhacker</groupId>
-			<artifactId>jfex-mvvm</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-
-		<!-- apache commons -->
-			<dependency>
-				<groupId>commons-codec</groupId>
-				<artifactId>commons-codec</artifactId>
-				<version>1.5</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>3.1</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-dbcp</groupId>
-				<artifactId>commons-dbcp</artifactId>
-				<version>1.2.2</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-el</groupId>
-				<artifactId>commons-el</artifactId>
-				<version>1.0</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>1.4</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
-				<version>2.4</version>
-			</dependency>
-			<dependency>
-				<groupId>commons-beanutils</groupId>
-				<artifactId>commons-beanutils</artifactId>
-				<version>1.8.3</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.8.1</version>
-				<scope>test</scope>
-			</dependency>
-
-	</dependencies>
+                    <execution>
+                        <id>test-compile</id>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.jcodec</groupId>
+            <artifactId>jcodec</artifactId>
+            <version>0.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jcodec</groupId>
+            <artifactId>jcodec-javase</artifactId>
+            <version>0.2.5</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.github.kleinerhacker</groupId>
+            <artifactId>jfex-mvvm</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.kleinerhacker</groupId>
+            <artifactId>jfex-controls</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- apache commons -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-el</groupId>
+            <artifactId>commons-el</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>de.codecentric.centerdevice</groupId>
+            <artifactId>centerdevice-nsmenufx</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+    </dependencies>
 
 
 </project>

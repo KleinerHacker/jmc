@@ -2,9 +2,11 @@ package org.pcsoft.app.jmc.ui.windows
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
+import javafx.scene.control.Menu
 import javafx.scene.control.Tab
 import javafx.scene.control.TabPane
 import javafx.stage.FileChooser
+import org.apache.commons.lang.SystemUtils
 import org.pcsoft.app.jmc.movie.ui.panes.MovieProjectPane
 import org.pcsoft.app.jmc.picture.ui.panes.PictureProjectPane
 import org.pcsoft.framework.jfex.mvvm.FxmlView
@@ -13,10 +15,11 @@ import java.util.*
 
 internal class MainWindowView : FxmlView<MainWindowViewModel>() {
 
+    @FXML private lateinit var mnuMain: Menu
     @FXML private lateinit var tabProjects : TabPane
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
-
+        mnuMain.isVisible = !SystemUtils.IS_OS_MAC
     }
 
     @FXML

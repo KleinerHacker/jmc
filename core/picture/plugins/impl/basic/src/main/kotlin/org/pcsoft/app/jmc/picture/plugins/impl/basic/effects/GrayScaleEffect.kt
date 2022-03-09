@@ -1,7 +1,7 @@
 package org.pcsoft.app.jmc.picture.plugins.impl.basic.effects
 
 import javafx.scene.paint.Color
-import org.pcsoft.app.jmc.commons.plugins.PluginInfo
+import org.pcsoft.app.jmc.core.plugin.api.PluginInfo
 import org.pcsoft.app.jmc.picture.plugins.api.PictureEffectPlugin
 
 @PluginInfo(name = "Gray Scale", description = "Gray Scale Effect")

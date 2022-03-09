@@ -4,16 +4,21 @@
 
 	<parent>
 		<groupId>org.pcsoft.app</groupId>
-		<artifactId>jmc-picture.plugins</artifactId>
+		<artifactId>jmc-core.plugin</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>jmc-picture.plugins.api</artifactId>
+	<artifactId>jmc-core.plugin.loader</artifactId>
 
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>jmc-core.plugin.api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jmc-commons</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

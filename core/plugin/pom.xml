@@ -4,17 +4,16 @@
 
 	<parent>
 		<groupId>org.pcsoft.app</groupId>
-		<artifactId>jmc</artifactId>
+		<artifactId>jmc-core</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>jmc-core</artifactId>
+	<artifactId>jmc-core.plugin</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>movie</module>
-		<module>picture</module>
-		<module>plugin</module>
+		<module>api</module>
+		<module>loader</module>
 	</modules>
 
 </project>

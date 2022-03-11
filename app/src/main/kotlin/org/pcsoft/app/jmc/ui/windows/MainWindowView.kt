@@ -5,8 +5,10 @@ import javafx.fxml.FXML
 import javafx.scene.control.Menu
 import javafx.scene.control.Tab
 import javafx.scene.control.TabPane
+import javafx.scene.image.ImageView
 import javafx.stage.FileChooser
 import org.apache.commons.lang.SystemUtils
+import org.pcsoft.app.jmc.commons.JmcIcon
 import org.pcsoft.app.jmc.movie.ui.panes.MovieProjectPane
 import org.pcsoft.app.jmc.picture.ui.panes.PictureProjectPane
 import org.pcsoft.framework.jfex.mvvm.FxmlView
@@ -31,7 +33,10 @@ internal class MainWindowView : FxmlView<MainWindowViewModel>() {
         )
         val file = fileChooser.showOpenDialog(tabProjects.scene.window)
         if (file != null) {
-            tabProjects.tabs.add(Tab(file.name, MovieProjectPane(file)))
+            val tab = Tab(file.name, MovieProjectPane(file))
+            tab.graphic = ImageView(JmcIcon.Media.movieFill)
+
+            tabProjects.tabs.add(tab)
         }
     }
 
@@ -46,7 +51,10 @@ internal class MainWindowView : FxmlView<MainWindowViewModel>() {
         )
         val file = fileChooser.showOpenDialog(tabProjects.scene.window)
         if (file != null) {
-            tabProjects.tabs.add(Tab(file.name, PictureProjectPane(file)))
+            val tab = Tab(file.name, PictureProjectPane(file))
+            tab.graphic = ImageView(JmcIcon.Media.imageFill)
+
+            tabProjects.tabs.add(tab)
         }
     }
 }
